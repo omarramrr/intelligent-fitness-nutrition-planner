@@ -1,61 +1,136 @@
-🎯 Intelligent Fitness & Nutrition Planner (JavaFX)
-An advanced, scientifically-grounded Java application designed to function as an automated personal trainer and nutritionist. This system leverages principles of progressive overload, volume management, and energy balance to generate hyper-personalized fitness and diet plans. Built with a modern JavaFX GUI and a robust MS SQL Server backend.
+# 🎯 Intelligent Fitness & Nutrition Planner (JavaFX)
 
-✨ Key Features & Algorithms
-🏋️‍♂️ 1. The Workout Generation Engine
-The heart of the application is a sophisticated PlanBuilder (Builder Pattern) that constructs workouts dynamically based on user goals and fitness levels.
+An advanced **Java desktop application** designed to function as an automated **personal trainer and nutrition planner**.
 
-Smart Split Architecture (A-F Rotations):
-Full Body: Generates up to 6 distinct templates (A-F) for high-frequency training, shifting emphasis (e.g., Quad Bias vs. Upper Power) to maximize recovery.
-Upper/Lower: Implements A/B/C rotations to balance Strength, Hypertrophy, and Stability within a single week.
-Scientific Volume Logic: Muscles are targeted 2-3x/week with strict volume caps (Max 27 exercises/week) to prevent overtraining.
-Equipment Aware: Adapts plan generation based on available equipment (Home vs. Gym).
-🥗 2. Adaptive Nutrition System
-Unlike static calorie calculators, this system "learns" from the user's metabolism.
+The system applies modern training science such as **progressive overload**, **volume management**, and **energy balance** to generate **hyper-personalized workout and nutrition plans**.
 
-TDEE Baseline: Mifflin-St Jeor equation modulated by activity level.
-Metabolic Adaptation: Tracks Weekly Average Weight (not daily swings) and compares trends over 2 weeks.
-Automatic Plateaus Fix: Subtracts calories dynamically if weight loss stalls for >2 weeks.
-📊 3. Robust Progress Tracking
-Relational Persistence: All data is securely stored in MS SQL Server.
-Rolling Averages: Removes "water-weight noise" from progress tracking to provide accurate metabolic feedback.
-🛠️ Technical Architecture
-Core Tech Stack
-Language: Java SE 21+
-UI Framework: JavaFX 25.0.1
-Database: Microsoft SQL Server
-Persistence: JDBC (Custom Repository Layer)
-Professional Design Patterns
-Builder Pattern: Complex WorkoutPlan construction.
-Strategy Pattern: Swappable IDietPlan algorithms.
-Repository Pattern: DAO layer decouples business logic from SQL.
-Singleton Pattern: Global DatabaseConnection management.
-Project Structure
-WholeProject/
-├── src/
-│   ├── app/                # Main Application & Session Management
-│   ├── config/             # DB Configuration & Properties
-│   ├── model/              # Core Domain Logic (Nutrition, Workout, User)
-│   └── view/               # JavaFX Controllers, FXML, and Stylesheets
-├── lib/                    # All JAR dependencies (JavaFX, JDBC)
-├── DATABASE_SETUP.sql       # SQL Schema Definition
-├── run_app.bat             # Primary Build & Run Script
-└── setup_javafx.bat        # Environment Setup Utility
-⚙️ Installation & Setup
-1. Database Setup
-Open SQL Server Management Studio (SSMS).
-Open and execute the DATABASE_SETUP.sql script.
-This creates the FitnessApp database and all 12 required tables.
-2. Configuration
-Verify the connection details in src/config/db.properties.
-Default: localhost:1433 with sa user.
-3. Build & Run
-The easiest way to run the project is using the provided automation scripts:
+Built with a modern **JavaFX GUI** and powered by a **Microsoft SQL Server backend**.
 
-First Time: Run setup_javafx.bat to ensure libraries are configured.
-Every Time: Run run_app.bat to compile and launch the application.
-📈 Future Roadmap
- Machine Learning: Predict 1RM (One Rep Max) trends.
- Mobile Port: Android/iOS integration via Gluon Mobile.
- Social API: Leaderboards and workout sharing.
-Created with focus on scientific training principles and professional software architecture.
+---
+
+# 🚀 Key Features
+
+## 🏋️ Workout Generation Engine
+
+The heart of the application is a sophisticated **PlanBuilder (Builder Pattern)** that dynamically generates workout plans based on user goals and fitness level.
+
+### Smart Training Splits
+
+**Full Body A–F Rotation**
+
+* Generates up to **6 unique training templates**
+* Alternates emphasis (Quad Bias, Upper Power, Posterior Focus)
+* Designed for **high-frequency training with optimal recovery**
+
+**Upper / Lower Split**
+
+* Implements **A/B/C rotations**
+* Balances **Strength, Hypertrophy, and Stability**
+
+### Scientific Volume Control
+
+* Muscles trained **2–3 times per week**
+* **Maximum cap of 27 exercises per week**
+* Prevents **overtraining and excessive fatigue**
+
+### Equipment Awareness
+
+The system automatically adapts workouts depending on available equipment:
+
+* 🏠 Home Gym
+* 🏋️ Commercial Gym
+
+---
+
+# 🥗 Adaptive Nutrition System
+
+Unlike traditional static calorie calculators, this system dynamically adapts to the user's metabolism.
+
+### TDEE Baseline
+
+Calories calculated using the **Mifflin-St Jeor equation** adjusted for activity level.
+
+### Metabolic Adaptation
+
+* Tracks **weekly average weight**
+* Filters out daily fluctuations
+* Compares progress across **2-week trends**
+
+### Automatic Plateau Correction
+
+If weight loss stalls for more than **2 weeks**, the system automatically:
+
+* Adjusts caloric intake
+* Maintains progress without extreme dieting
+
+---
+
+# 📊 Progress Tracking System
+
+### Relational Persistence
+
+All user data is stored securely in **Microsoft SQL Server**.
+
+### Rolling Averages
+
+The system removes **water weight noise** and analyzes only meaningful trends for accurate metabolic feedback.
+
+---
+
+# 🧠 Software Architecture
+
+## Core Technology Stack
+
+| Component    | Technology           |
+| ------------ | -------------------- |
+| Language     | Java SE 21+          |
+| UI Framework | JavaFX 25            |
+| Database     | Microsoft SQL Server |
+| Persistence  | JDBC                 |
+| Architecture | Layered Architecture |
+
+---
+
+# 🧩 Design Patterns Used
+
+The project follows professional software architecture principles:
+
+* **Builder Pattern** → Dynamic WorkoutPlan construction
+* **Strategy Pattern** → Swappable `IDietPlan` algorithms
+* **Repository Pattern** → Decouples SQL from business logic
+* **Singleton Pattern** → Centralized `DatabaseConnection`
+
+---
+
+# 📁 Project Structure
+
+```
+WholeProject
+│
+├── src
+│   ├── app        # Main application & session management
+│   ├── config     # Database configuration
+│   ├── model      # Core domain logic
+│   └── view       # JavaFX UI (FXML, controllers, styles)
+│
+├── lib            # External libraries (JavaFX, JDBC)
+│
+├── DATABASE_SETUP.sql
+├── run_app.bat
+└── setup_javafx.bat
+```
+
+# 📈 Future Roadmap
+
+* 🔬 Machine Learning prediction of **1RM trends**
+* 📱 Mobile version via **Gluon Mobile**
+* 🌐 Social API for **leaderboards and workout sharing**
+* ☁️ Cloud database support
+
+---
+
+# 👨‍💻 Author
+
+Developed with a focus on **scientific training principles** and **professional software architecture**.
+
+
