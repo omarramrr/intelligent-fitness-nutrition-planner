@@ -110,8 +110,8 @@ WholeProject
 ├── src
 │   ├── app        # Main application & session management
 │   ├── config     # Database configuration
-│   ├── model      # Core domain logic
-│   └── view       # JavaFX UI (FXML, controllers, styles)
+│   ├── Core       # Core domain logic
+│   └── GUI        # JavaFX UI (FXML, controllers, styles)
 │
 ├── lib            # External libraries (JavaFX, JDBC)
 │
