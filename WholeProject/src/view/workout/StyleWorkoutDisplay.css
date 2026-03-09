@@ -1,0 +1,135 @@
+/* ===== GLOBAL BACKGROUND ===== */
+.dark-bg {
+    -fx-background-color: linear-gradient(to bottom right, #0a1a3c, #112141);
+}
+
+/* ===== TITLE TEXT ===== */
+.title-text {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.4), 15, 0.4, 0, 0);
+}
+
+/* ===== INFO CONTAINER ===== */
+.info-container {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 12px;
+    -fx-border-color: rgba(77, 171, 255, 0.3);
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px;
+}
+
+/* ===== INFO LABELS ===== */
+.info-label-small {
+    -fx-text-fill: #4dabff;
+    -fx-font-size: 12px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.info-value {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== SCROLL PANE ===== */
+.workout-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.workout-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.workout-scroll .scroll-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.workout-scroll .scroll-bar .thumb {
+    -fx-background-color: rgba(77, 171, 255, 0.5);
+    -fx-background-radius: 5px;
+}
+
+/* ===== WORKOUT DAY CARD ===== */
+.day-card {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 15px;
+    -fx-border-color: rgba(255, 255, 255, 0.15);
+    -fx-border-width: 1px;
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.3, 0, 2);
+}
+
+/* ===== DAY HEADER ===== */
+.day-header {
+    -fx-text-fill: #4dabff;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== EXERCISE TABLE ===== */
+.exercise-table {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.exercise-table .column-header-background {
+    -fx-background-color: rgba(77, 171, 255, 0.15);
+}
+
+.exercise-table .column-header {
+    -fx-background-color: transparent;
+}
+
+.exercise-table .column-header .label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.exercise-table .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.exercise-table .table-row-cell:odd {
+    -fx-background-color: rgba(255, 255, 255, 0.02);
+}
+
+.exercise-table .table-row-cell:hover {
+    -fx-background-color: rgba(77, 171, 255, 0.1);
+}
+
+.exercise-table .table-cell {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* ===== BACK BUTTON ===== */
+.back-btn {
+    -fx-background-color: linear-gradient(to right, #1a73e8, #4dabff);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-radius: 12px;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.3, 0, 2);
+}
+
+.back-btn:hover {
+    -fx-background-color: linear-gradient(to right, #1669d8, #3ea1ff);
+}
+
+.back-btn:pressed {
+    -fx-background-color: linear-gradient(to right, #0f55b3, #2689e6);
+}

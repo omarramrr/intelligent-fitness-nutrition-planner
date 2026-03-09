@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import view.shared.BackButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="dark-bg" stylesheets="@/view/nutrition/StyleNutritionDisplay.css, @/view/shared/shared-buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.nutrition.NutritionDisplayController">
+    <children>
+
+        <VBox alignment="TOP_CENTER" spacing="25" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <padding>
+                <Insets bottom="40" left="60" right="60" top="40" />
+            </padding>
+
+            <!-- Title -->
+            <Label styleClass="title-text" text="Your Nutrition Plan">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+
+            <!-- Goal Section -->
+            <VBox styleClass="info-container" spacing="10">
+                <padding>
+                    <Insets top="15" bottom="15" left="25" right="25" />
+                </padding>
+                <Label styleClass="section-label" text="Goal" />
+                <Label fx:id="goalLabel" styleClass="goal-text" wrapText="true" />
+            </VBox>
+
+            <!-- Calorie Target -->
+            <VBox styleClass="calorie-container" spacing="5" alignment="CENTER">
+                <padding>
+                    <Insets top="20" bottom="20" left="30" right="30" />
+                </padding>
+                <Label styleClass="calorie-label-small" text="Daily Calorie Target" />
+                <Label fx:id="caloriesLabel" styleClass="calorie-big" />
+            </VBox>
+
+            <!-- Macros Section -->
+            <VBox styleClass="macro-container" spacing="20">
+                <padding>
+                    <Insets top="20" bottom="20" left="30" right="30" />
+                </padding>
+
+                <Label styleClass="section-label" text="Macronutrient Breakdown" />
+
+                <!-- Protein -->
+                <VBox spacing="8">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label styleClass="macro-name" text="Protein:" />
+                        <Label fx:id="proteinLabel" styleClass="macro-value" />
+                    </HBox>
+                    <ProgressBar fx:id="proteinBar" styleClass="protein-bar" prefWidth="600" prefHeight="12" />
+                </VBox>
+
+                <!-- Carbs -->
+                <VBox spacing="8">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label styleClass="macro-name" text="Carbs:" />
+                        <Label fx:id="carbsLabel" styleClass="macro-value" />
+                    </HBox>
+                    <ProgressBar fx:id="carbsBar" styleClass="carbs-bar" prefWidth="600" prefHeight="12" />
+                </VBox>
+
+                <!-- Fats -->
+                <VBox spacing="8">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label styleClass="macro-name" text="Fats:" />
+                        <Label fx:id="fatsLabel" styleClass="macro-value" />
+                    </HBox>
+                    <ProgressBar fx:id="fatsBar" styleClass="fats-bar" prefWidth="600" prefHeight="12" />
+                </VBox>
+            </VBox>
+
+            <!-- Tip Section -->
+            <Label fx:id="tipLabel" styleClass="tip-label" wrapText="true" />
+
+
+
+        </VBox>
+
+        <!-- Global Back Button -->
+        <BackButton onAction="#goBack" AnchorPane.topAnchor="16.0" AnchorPane.leftAnchor="16.0" />
+
+    </children>
+</AnchorPane>

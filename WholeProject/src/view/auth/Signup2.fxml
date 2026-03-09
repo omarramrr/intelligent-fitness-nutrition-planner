@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import view.shared.BackButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" styleClass="dark-bg" stylesheets="@/view/profile/StyleProfileActions.css, @/view/shared/shared-buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.auth.Signup2Controller">
+    <children>
+
+
+        <VBox alignment="TOP_CENTER" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <padding>
+                <Insets bottom="40" left="60" right="60" top="40" />
+            </padding>
+
+            <!-- Title -->
+            <Label styleClass="title-text" text="Create Profile">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+
+            <!-- Instructions -->
+            <VBox styleClass="info-container" spacing="5" alignment="CENTER" maxWidth="700">
+               <Label styleClass="requirements-text" text="Tell us about yourself so we can personalize your experience." />
+            </VBox>
+
+            <!-- Input Fields Container -->
+             <VBox spacing="15" alignment="CENTER">
+             
+                <HBox spacing="30" alignment="CENTER">
+                    <!-- Gender -->
+                    <VBox spacing="5" alignment="CENTER_LEFT">
+                        <Label styleClass="section-label" text="Gender:" />
+                        <ChoiceBox fx:id="genderChoiceBox" styleClass="choice-box" prefWidth="300.0" />
+                    </VBox>
+                    
+                    <!-- Birthdate -->
+                    <VBox spacing="5" alignment="CENTER_LEFT">
+                        <Label styleClass="section-label" text="Birthdate (yyyy/mm/dd):" />
+                        <TextField fx:id="birthdateField" styleClass="password-field" promptText="e.g. 2000/01/15" prefWidth="300.0" />
+                    </VBox>
+                </HBox>
+
+                <HBox spacing="30" alignment="CENTER">
+                    <!-- Weight -->
+                    <VBox spacing="5" alignment="CENTER_LEFT">
+                         <Label styleClass="section-label" text="Weight (kg):" />
+                         <TextField fx:id="weightField" styleClass="password-field" promptText="e.g. 70" prefWidth="300.0" />
+                    </VBox>
+
+                    <!-- Height -->
+                    <VBox spacing="5" alignment="CENTER_LEFT">
+                         <Label styleClass="section-label" text="Height (cm):" />
+                         <TextField fx:id="heightField" styleClass="password-field" promptText="e.g. 175" prefWidth="300.0" />
+                    </VBox>
+                </HBox>
+                
+                <HBox spacing="30" alignment="CENTER">
+                    <!-- Fitness Level -->
+                    <VBox spacing="5" alignment="CENTER_LEFT">
+                        <Label styleClass="section-label" text="Fitness Level:" />
+                        <ChoiceBox fx:id="fitnessLevelChoiceBox" styleClass="choice-box" prefWidth="300.0" />
+                    </VBox>
+                    
+                    <!-- Goal -->
+                    <VBox spacing="5" alignment="CENTER_LEFT">
+                        <Label styleClass="section-label" text="Primary Goal:" />
+                        <ChoiceBox fx:id="goalChoiceBox" styleClass="choice-box" prefWidth="300.0" />
+                    </VBox>
+                </HBox>
+
+            </VBox>
+
+            <!-- Message Label -->
+            <Label fx:id="messageLabel" wrapText="true" />
+
+            <!-- Action Buttons -->
+            <HBox spacing="20" alignment="CENTER">
+                <!-- Back button moved to top-left -->
+                <Button onAction="#completeSignup" prefWidth="200" styleClass="primary-btn" text="Complete Sign Up" />
+            </HBox>
+
+        </VBox>
+
+    
+        <!-- Global Back Button -->
+        <BackButton onAction="#goBack" AnchorPane.topAnchor="16.0" AnchorPane.leftAnchor="16.0" />
+        
+    </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import view.shared.BackButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="900.0" styleClass="dark-bg" stylesheets="@/view/profile/StyleProfile.css, @/view/shared/shared-buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.profile.SceneProfileController">
+    <children>
+
+
+    
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="scroll-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <content>
+
+                <VBox alignment="TOP_CENTER" spacing="30">
+
+                    <padding>
+                        <Insets bottom="40" left="60" right="60" top="40" />
+                    </padding>
+
+                    <!-- Title -->
+                    <Label styleClass="title-text" text="User Profile">
+                        <font>
+                            <Font size="36.0" />
+                        </font>
+                    </Label>
+
+                    <!-- Profile Data Grid -->
+                    <GridPane hgap="40" vgap="25" styleClass="profile-grid">
+                        <padding>
+                            <Insets top="20" bottom="20" left="40" right="40" />
+                        </padding>
+
+                        <!-- Row 0: Username -->
+                        <Label text="Username:" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="usernameField" editable="false" styleClass="readonly-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <!-- Row 1: ID -->
+                        <Label text="ID:" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="idField" editable="false" styleClass="readonly-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <!-- Row 2: Email -->
+                        <Label text="Email:" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="emailField" editable="false" styleClass="readonly-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <!-- Row 3: Age -->
+                        <Label text="Age:" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <TextField fx:id="ageField" editable="false" styleClass="readonly-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                        <!-- Row 4: Gender -->
+                        <Label text="Gender:" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <TextField fx:id="genderField" editable="false" styleClass="readonly-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                        <!-- Row 5: Weight -->
+                        <Label text="Weight (kg):" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                        <TextField fx:id="weightField" editable="false" styleClass="readonly-field" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                        <!-- Row 6: Height -->
+                        <Label text="Height (cm):" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                        <TextField fx:id="heightField" editable="false" styleClass="readonly-field" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                        <!-- Row 7: Fitness Level -->
+                        <Label text="Fitness Level:" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                        <TextField fx:id="fitnessLevelField" editable="false" styleClass="readonly-field" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                        <!-- Row 8: Goal -->
+                        <Label text="Goal:" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                        <TextField fx:id="goalField" editable="false" styleClass="readonly-field" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                    </GridPane>
+
+                    <!-- Action Buttons -->
+                    <VBox alignment="CENTER" spacing="15">
+                        <Button onAction="#goToChangePassword" prefWidth="300" styleClass="primary-btn" text="Change Password" />
+                        <Button onAction="#goToChangeGoal" prefWidth="300" styleClass="primary-btn" text="Change Goal" />
+                        <Button onAction="#goToChangeFitnessLevel" prefWidth="300" styleClass="primary-btn" text="Change Fitness Level" />
+                    </VBox>
+
+                    <!-- Log Out Button -->
+                    <Button onAction="#logout" prefWidth="200" styleClass="primary-btn" text="Log Out" />
+
+                </VBox>
+
+            </content>
+
+        </ScrollPane>
+
+        <!-- Global Back Button (Fixed Position) -->
+        <BackButton onAction="#goBack" AnchorPane.topAnchor="16.0" AnchorPane.leftAnchor="16.0" />
+
+    </children>
+</AnchorPane>

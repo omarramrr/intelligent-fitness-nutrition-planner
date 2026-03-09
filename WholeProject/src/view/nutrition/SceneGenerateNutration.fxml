@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import view.shared.BackButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="dark-bg" stylesheets="@/view/nutrition/StyleGenerateNutration.css, @/view/shared/shared-buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.nutrition.GenerateNutrationController">
+    <children>
+
+        <VBox alignment="CENTER" spacing="35" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <padding>
+                <Insets bottom="40" left="60" right="60" top="40" />
+            </padding>
+
+            <!-- Title -->
+            <Label styleClass="title-text" text="Generate Nutrition Plan">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+
+            <!-- Buttons Section -->
+            <VBox alignment="CENTER" spacing="20">
+
+                <!-- Generate New Plan Button -->
+                <Button onAction="#generateNewPlan" prefWidth="300" styleClass="primary-btn" text="Generate New Plan" />
+
+                <!-- View Current Plan Button -->
+                <Button onAction="#viewCurrentPlan" prefWidth="300" styleClass="primary-btn" text="View Current Plan" />
+
+                <!-- 1 Day Meal Plan Button -->
+                <Button onAction="#oneDayMealPlan" prefWidth="300" styleClass="primary-btn" text="1 Day Meal Plan" />
+
+            </VBox>
+
+            <!-- Message Label -->
+            <Label fx:id="messageLabel" wrapText="true" />
+
+        </VBox>
+
+        <!-- Global Back Button -->
+        <BackButton onAction="#goBack" AnchorPane.topAnchor="16.0" AnchorPane.leftAnchor="16.0" />
+
+    </children>
+</AnchorPane>

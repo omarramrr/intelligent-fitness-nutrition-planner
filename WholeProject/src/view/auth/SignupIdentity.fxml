@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import view.shared.BackButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" styleClass="dark-bg" stylesheets="@/view/profile/StyleProfileActions.css, @/view/shared/shared-buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.auth.SignupIdentityController">
+    <children>
+
+
+        <VBox alignment="TOP_CENTER" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+
+            <padding>
+                <Insets bottom="40" left="60" right="60" top="40" />
+            </padding>
+
+            <!-- Title -->
+            <Label styleClass="title-text" text="Create Account">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+
+            <!-- Requirements Section -->
+            <HBox spacing="20" alignment="CENTER" prefHeight="120">
+                <!-- Username Requirements -->
+                <VBox styleClass="info-container" spacing="5" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                   <Label styleClass="section-label" text="Username:" />
+                   <Label styleClass="requirements-text" text="• Must not be empty" />
+                   <Label styleClass="requirements-text" text="• Unique within the system" />
+                </VBox>
+                
+                 <!-- Email Requirements -->
+                <VBox styleClass="info-container" spacing="5" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                   <Label styleClass="section-label" text="Email:" />
+                   <Label styleClass="requirements-text" text="• Valid email format (user@example.com)" />
+                </VBox>
+            </HBox>
+
+            <!-- Input Fields Container -->
+             <VBox spacing="15" alignment="CENTER">
+             
+                <!-- Username -->
+                <VBox spacing="5" alignment="TOP_LEFT">
+                    <Label styleClass="section-label" text="Enter Username" />
+                    <TextField fx:id="usernameField" styleClass="password-field" promptText="Choose a username" style="-fx-pref-width: 600px; -fx-alignment: CENTER_LEFT;" />
+                </VBox>
+                
+                <!-- Email -->
+                <VBox spacing="5" alignment="TOP_LEFT">
+                    <Label styleClass="section-label" text="Enter Email" />
+                    <TextField fx:id="emailField" styleClass="password-field" promptText="Enter your email" style="-fx-pref-width: 600px; -fx-alignment: CENTER_LEFT;" />
+                </VBox>
+
+            </VBox>
+
+            <!-- Message Label -->
+            <Label fx:id="messageLabel" wrapText="true" />
+
+            <!-- Action Buttons -->
+            <HBox spacing="20" alignment="CENTER">
+                <Button onAction="#goToNextStep" prefWidth="150" styleClass="primary-btn" text="Next Step" />
+            </HBox>
+
+        </VBox>
+
+    
+        <!-- Global Back Button -->
+        <BackButton onAction="#goBack" AnchorPane.topAnchor="16.0" AnchorPane.leftAnchor="16.0" />
+        
+    </children>
+</AnchorPane>

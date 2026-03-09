@@ -1,0 +1,148 @@
+/* ===== SECTION TITLES & TEXT ===== */
+.section-title {
+    -fx-text-fill: var(--text-primary);
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.label-text {
+    -fx-text-fill: var(--text-primary);
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.small-text {
+    -fx-text-fill: var(--text-secondary);
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== CHOICE BOX STYLING ===== */
+.choice-box {
+    -fx-background-color: var(--input-bg);
+    -fx-background-radius: var(--border-radius-sm);
+    -fx-border-color: var(--border-light);
+    -fx-border-radius: var(--border-radius-sm);
+    -fx-text-fill: var(--text-primary);
+}
+
+.choice-box:hover {
+    -fx-background-color: var(--input-bg-hover);
+    -fx-border-color: var(--border-accent);
+}
+
+.choice-box .label {
+    -fx-text-fill: var(--text-primary);
+}
+
+.choice-box .arrow {
+    -fx-background-color: var(--text-primary);
+}
+
+.choice-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+/* Dropdown menu styling */
+.choice-box .context-menu {
+    -fx-background-color: var(--dropdown-bg);
+    -fx-border-color: var(--dropdown-border);
+    -fx-border-width: 1px;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: var(--dropdown-item-hover);
+}
+
+.choice-box .menu-item .label {
+    -fx-text-fill: var(--text-primary);
+}
+
+
+/* ===== LIST VIEW STYLING ===== */
+.list-view {
+    -fx-background-color: var(--card-bg);
+    -fx-background-radius: var(--border-radius-sm);
+    -fx-border-color: var(--overlay-light);
+    -fx-border-radius: var(--border-radius-sm);
+    -fx-padding: 5;
+}
+
+.list-view:focused {
+    -fx-border-color: var(--border-accent);
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: var(--light-accent);
+    -fx-font-size: 14px;
+    -fx-padding: 5 10;
+}
+
+.list-cell:filled:selected,
+.list-cell:filled:selected:hover {
+    -fx-background-color: var(--primary-blue);
+    -fx-text-fill: var(--text-primary);
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: var(--overlay-subtle);
+}
+
+.list-cell:empty {
+    -fx-background-color: transparent;
+}
+
+/* ScrollBar Styling to match dark theme */
+.list-view .scroll-bar:vertical,
+.list-view .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.list-view .scroll-bar .thumb {
+    -fx-background-color: var(--scrollbar-thumb);
+    -fx-background-radius: 4;
+}
+
+.list-view .scroll-bar .track {
+    -fx-background-color: var(--scrollbar-track);
+    -fx-background-radius: 4;
+}
+
+/* ===== PROFILE ICON BUTTON ===== */
+.profile-icon-btn {
+    -fx-background-color: linear-gradient(to right, #1a73e8, #4dabff);
+    /* Same gradient as primary buttons */
+    -fx-background-radius: 100;
+    /* Full Circle */
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    /* Large emoji */
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-min-width: 80px;
+    /* 3x larger than original */
+    -fx-min-height: 80px;
+    -fx-max-width: 80px;
+    -fx-max-height: 80px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(77, 171, 255, 0.6), 15, 0.5, 0, 3);
+    /* Soft glowing border */
+    -fx-border-width: 0;
+    /* No border */
+}
+
+.profile-icon-btn:hover {
+    -fx-background-color: linear-gradient(to right, #1669d8, #3ea1ff);
+    /* Brighter gradient on hover */
+    -fx-effect: dropshadow(gaussian, rgba(77, 171, 255, 0.8), 20, 0.6, 0, 4);
+    /* Increased glow on hover */
+}
+
+.profile-icon-btn:pressed {
+    -fx-background-color: linear-gradient(to right, #0f55b3, #2689e6);
+    /* Darker gradient when pressed */
+    -fx-effect: dropshadow(gaussian, rgba(77, 171, 255, 0.5), 12, 0.4, 0, 2);
+}

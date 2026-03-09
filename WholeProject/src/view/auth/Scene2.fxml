@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import view.shared.BackButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" styleClass="dark-bg" stylesheets="@/view/profile/StyleProfileActions.css, @/view/shared/shared-buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.auth.Scene2Controller">
+    <children>
+
+        <VBox alignment="TOP_CENTER" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <padding>
+                <Insets bottom="40" left="60" right="60" top="40" />
+            </padding>
+
+            <!-- Title -->
+            <Label styleClass="title-text" text="Sign In">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+
+            <!-- Input Fields Container -->
+            <VBox spacing="25" alignment="CENTER">
+            
+                <!-- Email Section -->
+                <VBox spacing="8" alignment="TOP_LEFT">
+                    <Label styleClass="section-label" text="Enter Email" />
+                    <TextField fx:id="usernameField" styleClass="password-field" promptText="Enter Email" style="-fx-pref-width: 600px; -fx-alignment: CENTER_LEFT;" />
+                </VBox>
+                
+                <!-- Password Section -->
+                <VBox spacing="8" alignment="TOP_LEFT">
+                    <Label styleClass="section-label" text="Enter Password" />
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <PasswordField fx:id="passwordField" styleClass="password-field" promptText="Enter Password" style="-fx-pref-width: 600px; -fx-alignment: CENTER_LEFT;" />
+                        <TextField fx:id="visiblePasswordField" styleClass="password-field" promptText="Enter Password" style="-fx-pref-width: 600px; -fx-alignment: CENTER_LEFT;" visible="false" managed="false" />
+                        <Button fx:id="togglePasswordBtn" onAction="#togglePasswordVisibility" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-text-fill: #4dabff; -fx-font-size: 20px; -fx-padding: 5;">👁</Button>
+                    </HBox>
+                </VBox>
+
+            </VBox>
+
+            <!-- Error Label -->
+            <Label fx:id="errorLabel" styleClass="error-message" text="" wrapText="true" />
+
+            <!-- Action Buttons -->
+            <HBox spacing="20" alignment="CENTER">
+                <Button onAction="#onSignInClicked" prefWidth="150" styleClass="primary-btn" text="Sign In" />
+            </HBox>
+
+        </VBox>
+
+        <!-- Global Back Button -->
+        <BackButton onAction="#onBackClicked" AnchorPane.topAnchor="16.0" AnchorPane.leftAnchor="16.0" />
+        
+    </children>
+</AnchorPane>

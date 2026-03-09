@@ -1,0 +1,79 @@
+# Java project .gitignore for the fitness app
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Build directories (Maven, Gradle, generic)
+target/
+build/
+out/
+bin/
+
+# Maven-specific
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Gradle-specific
+.gradle
+
+# IDE directories and project files
+# Eclipse
+*.classpath
+*.project
+.settings/
+
+# IntelliJ IDEA
+*.iml
+.idea/
+*.ipr
+*.iws
+.idea_modules/
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbactions.xml
+nb-configuration.xml
+
+# Operating system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Generated resources or metadata
+src/sources.txt
+
+# Database properties (might contain credentials)
+config/db.properties
+
+# Environment and local configs
+*.env
+*.local
+
+# Other
+# any local log/temporary files
+*_log.*
+
+# scripts or temporary files
+~$*
+
+# keep the readme, config scripts, source code etc.

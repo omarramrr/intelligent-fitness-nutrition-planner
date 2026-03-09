@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import view.shared.BackButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="dark-bg" stylesheets="@/view/workout/StyleWorkoutDisplay.css, @/view/shared/shared-buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.workout.WorkoutDisplayController">
+    <children>
+
+        <VBox alignment="TOP_CENTER" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <padding>
+                <Insets bottom="40" left="60" right="60" top="40" />
+            </padding>
+
+            <!-- Title -->
+            <Label styleClass="title-text" text="Your Workout Plan">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+
+            <!-- Plan Info Section -->
+            <HBox styleClass="info-container" spacing="30" alignment="CENTER">
+                <padding>
+                    <Insets top="15" bottom="15" left="25" right="25" />
+                </padding>
+                <VBox spacing="5">
+                    <Label styleClass="info-label-small" text="Fitness Level" />
+                    <Label fx:id="fitnessLevelLabel" styleClass="info-value" />
+                </VBox>
+                <VBox spacing="5">
+                    <Label styleClass="info-label-small" text="Training Split" />
+                    <Label fx:id="trainingSplitLabel" styleClass="info-value" />
+                </VBox>
+                <VBox spacing="5">
+                    <Label styleClass="info-label-small" text="Days/Week" />
+                    <Label fx:id="trainingDaysLabel" styleClass="info-value" />
+                </VBox>
+            </HBox>
+
+            <!-- Workout Days Container (Scrollable) -->
+            <ScrollPane styleClass="workout-scroll" fitToWidth="true" VBox.vgrow="ALWAYS">
+                <VBox fx:id="workoutDaysContainer" spacing="20">
+                    <padding>
+                        <Insets top="10" bottom="10" />
+                    </padding>
+                </VBox>
+            </ScrollPane>
+
+        </VBox>
+
+        <!-- Global Back Button -->
+        <BackButton onAction="#goHome" AnchorPane.topAnchor="16.0" AnchorPane.leftAnchor="16.0" />
+
+    </children>
+</AnchorPane>
